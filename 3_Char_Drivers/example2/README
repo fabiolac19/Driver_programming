@@ -1,0 +1,7 @@
+$ sudo make
+$ sudo mknod /dev/chardev c 60 0
+$ sudo chmod 666 /dev/chardev
+$ sudo insmod chardev.k
+$ sudo rmmod chardev
+$ sudo rm /dev/chardev
+
