@@ -6,7 +6,7 @@
 // module attributes
 MODULE_LICENSE("GPL"); // this avoids kernel taint warning
 MODULE_DESCRIPTION("Device Driver Demo");
-MODULE_AUTHOR("Appu Sajeev");
+MODULE_AUTHOR("Prakash Ranjan");
 
 static char msg[100]={0};
 static short readPos=0;
@@ -33,8 +33,10 @@ int init_module(void)
 {
 	int t = register_chrdev(89,"myDev",&fops); //register driver with major:89
 	
-	if (t<0) printk(KERN_ALERT "Device registration failed..\n");
-	else printk(KERN_ALERT "Device registered...\n");
+	if (t<0) 
+		printk(KERN_ALERT "Device registration failed..\n");
+	else 
+		printk(KERN_ALERT "Device registered...\n");
 
 	return t;
 }
