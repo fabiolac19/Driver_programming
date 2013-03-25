@@ -1,0 +1,7 @@
+mknod /dev.myDev c 89 0
+make
+insmod myDev.ko
+gcc test.c
+./a.out prakash
+
+rmmod myDev
