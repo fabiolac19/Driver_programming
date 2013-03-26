@@ -1,0 +1,16 @@
+This program shows the usage of two Kernel API
+
+1. copy_from_user
+2. copy_to_user
+
+====================================================================
+How to use the priogram
+====================================================================
+
+mknod /dev.myDev c 89 0
+make
+insmod myDev.ko
+gcc test.c
+./a.out prakash
+
+rmmod myDev
